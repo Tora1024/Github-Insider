@@ -1,19 +1,31 @@
 <!DOCTYPE html>
-<html ng-app="App">
-<head>
-	<title>Github App</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<html ng-app="githubViewer">
 
+  <head>
+    <title>Github App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-	<script type="text/javascript" src="./app/app.module.js"></script>
-	<link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
-</head>
-<body>
-	<div class="container" ng-include="'app/components/home/home.html'">
-		
-	</div>
-</body>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+  </head>
+
+  <body>
+    <div class="container" main></div>
+
+    <!-- Main App -->
+    <script src="app/app.module.js"></script>
+    <script src="app/app.controllers.js"></script>
+
+    <!-- Directives -->
+    <script src="app/components/main/main.directive.js"></script>
+    <script src="app/components/search_bar/search_bar.directive.js"></script>
+    <script src="app/components/user_repositories/user_repositories.directive.js"></script>
+
+    <!-- Services -->
+    <script src="app/services/github.service.js"></script>
+  </body>
+
 </html>
