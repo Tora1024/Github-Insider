@@ -6,7 +6,7 @@
   <div>
     <img src="{{user.avatar_url}}" style="width:80px;height:80px;" />
   </div>
-  <select ng-model="repoSortOrder">
+  <select ng-model="repoSortOrder" class="form-control">
     <option value="+name">Name</option>
     <option value="-stargazers_count">Count</option>
   </select>
@@ -30,4 +30,3 @@
   </tbody>
 
 </table>
-<a href="#/main">Back to Search</a>
